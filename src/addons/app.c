@@ -7,6 +7,10 @@
 
 #ifdef FLECS_APP
 
+#if defined(__EMSCRIPTEN__)
+#include <emscripten.h>
+#endif 
+
 static
 int flecs_default_run_action(
     ecs_world_t *world,
